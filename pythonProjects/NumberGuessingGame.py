@@ -1,6 +1,9 @@
 import random
 
-print("Please make all inputs as integers. Non-integer inputs will be rejected.\n")
+print("Please make all inputs as integers. Non-integer inputs will be rejected.")
 min = int(input("Enter minimum range: "))
 max = int(input("Enter maximum range: "))
-random.randint(min, max)
+number = random.randint(min, max)
+
+guess = input("Enter your first guess: ")
+print(str(min) + str(max) + str(number) + str(guess))
