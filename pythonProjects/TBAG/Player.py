@@ -3,9 +3,10 @@ import Room
 class Player:
     name = ""
     inventory = []
-    location = ""
+    location = Room.Room()
     wealth = 0
     held_item = ""
+    health = 100
 
     def init(self, location, wealth, name):
         self.name = name
@@ -16,8 +17,8 @@ class Player:
         wealth = self.wealth + amount
         return wealth
 
-    def move(self, room):
-        location = room
+    def move(self, direction):
+        ""
 
     def collect(self, item):
         self.inventory.append(item)
@@ -28,4 +29,3 @@ class Player:
     def atk(self):
         "yeet"
 
-    
