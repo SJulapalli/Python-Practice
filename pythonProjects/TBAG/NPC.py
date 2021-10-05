@@ -4,13 +4,15 @@ import Room
 class NPC:
     name = ""
     inventory = []
-    location = Room.Room()
+    location = ""
     wealth = 0
     held_item = ""
     health = 100
 
     def atk(self):
-        "yeet"
+        ""
 
-    
+class Veda(NPC):
 
+    def talk(self):
+        ""

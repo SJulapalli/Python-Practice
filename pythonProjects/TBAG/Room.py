@@ -1,7 +1,12 @@
+import Enemy
+import NPC
+import Objects
+
+
 class Room:
+    name = ""
     description = ""
     enemies = []
-    items = []
     objects = []
     people = []
     dimensions = ""
@@ -10,14 +15,32 @@ class Room:
     front_room = ""
     previous_room = ""
 
+    def listObjects(self):
+        print("The room contains:")
+        count = 1
+        for x in self.objects:
+            print(str(count) + ". " + x.name)
+            count = count + 1
+
     def cNicksRoom(self):
-        self.objects.append("Cosby poster")
-        self.objects.append("Cosby Daikimura")
+        temp = Objects.SmallObject()
+        temp.cosbyPoster()
+        self.objects.append(temp)
+        temp = Objects.SmallObject()
+        temp.cosbyDaikamakura()
+        self.objects.append(temp)
 
     def cVedasRoom(self):
-        self.objects.append("big massive bed")
-        self.objects.append("The WHOLE gaming setup")
-        self.objects.append("A whole shelf")
-        self.objects.append("A whole shelf of manga")
+        temp = Objects.MassiveObject()
+        temp.bigMassiveBed()
+        self.objects.append(temp)
+        temp = Objects.MassiveObject()
+        temp.theWHOLEGamingSetup()
+        self.objects.append(temp)
+        temp = Objects.MassiveObject()
+        temp.shelf()
+        self.objects.append(temp)
+        temp = Objects.MassiveObject()
+        temp.mangaShelf()
+        self.objects.append(temp)
         self.people.append("Veda")
-        self.description = "The rooom's a fuckin circle bruh. And all the walls are constantly changing color."

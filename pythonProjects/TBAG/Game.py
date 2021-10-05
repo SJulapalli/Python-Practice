@@ -1,6 +1,9 @@
-import TBAG.Room
-import TBAG.Player
-import TBAG.NPC
-import TBAG.Enemy
+import Room
+import Objects
+import Player
+import NPC
+import Enemy
+import Books
 
+temp = []
 rooms = []
